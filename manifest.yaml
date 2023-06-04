@@ -1,1 +1,3 @@
-image: hello/world
+image: "hello/world"
+delegateName: "non"
+acrregistry: "lorennonprod"
