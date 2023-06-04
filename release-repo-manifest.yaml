@@ -1,1 +1,3 @@
-image: release
+image: "release"
+delegateName: "non"
+acrregistry: "lorennonprod"
