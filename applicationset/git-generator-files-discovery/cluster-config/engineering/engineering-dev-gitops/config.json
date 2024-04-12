@@ -2,7 +2,7 @@
   "cluster" : {
     "owner" : "cluster-admin@company.com",
     "address" : "https://kubernetes.default.svc",
-    "name" : "engineering-dev"
+    "name" : "in-cluster"
   },
   "aws_account" : "123456",
   "asset_id" : "234"
