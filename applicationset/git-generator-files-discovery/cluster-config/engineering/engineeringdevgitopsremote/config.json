@@ -1,0 +1,9 @@
+{
+  "cluster" : {
+    "owner" : "cluster-admin@company.com",
+    "address" : "https://kubernetes.default.svc",
+    "name" : "loren-private-us-west-2-ekscluster"
+  },
+  "aws_account" : "123456",
+  "asset_id" : "d"
+}
