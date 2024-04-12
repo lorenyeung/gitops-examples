@@ -5,7 +5,7 @@ metadata:
 spec:  
   generators:  
     - git:  
-        repoURL: https://github.com/lorenyeung/applicationset.git  
+        repoURL: https://github.com/lorenyeung/gitops-examples.git  
         revision: HEAD  
         files:  
         - path: "applicationset/git-generator-files-discovery/cluster-config/**/config.json"  
@@ -15,7 +15,7 @@ spec:
     spec:  
       project: "0e964829"
       source:  
-        repoURL: https://github.com/lorenyeung/applicationset.git  
+        repoURL: https://github.com/lorenyeung/gitops-examples.git  
         targetRevision: HEAD  
         path: "applicationset/git-generator-files-discovery/apps/guestbook"  
       destination:  
