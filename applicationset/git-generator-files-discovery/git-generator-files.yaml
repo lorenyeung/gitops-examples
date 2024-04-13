@@ -3,9 +3,7 @@ kind: ApplicationSet
 metadata:  
   name: guestbookappset
   labels: 
-    harness.io/envRef: '{{envTag}}'
-    harness.io/serviceRef: '{{serviceTag}}'
-    harness.io/buildRef: '{{releaseTag}}'
+    harness.io/envRef: 'dev'
 spec:  
   generators:  
     - git:  
