@@ -2,6 +2,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet  
 metadata:  
   name: guestbookappset
+  labels: 
+    harness.io/envRef: '{{envTag}}'
+    harness.io/serviceRef: '{{serviceTag}}'
+    harness.io/buildRef: '{{releaseTag}}'
 spec:  
   generators:  
     - git:  
