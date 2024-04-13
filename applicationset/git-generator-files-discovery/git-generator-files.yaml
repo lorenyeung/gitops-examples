@@ -15,7 +15,7 @@ spec:
         - path: "applicationset/git-generator-files-discovery/cluster-config/**/config.json"  
   template:  
     metadata:  
-      name: '{{cluster.name}}-guestbook-appset'  
+      name: '{{cluster.name}}-guestbook-appsetgenerated'  
     spec:  
       project: "0e964829"
       source:  
