@@ -3,7 +3,7 @@ kind: ApplicationSet
 metadata:  
   name: guestbookappset
   labels: 
-    harness.io/envRef: "engineering{{ target.clusterName }}gitops"
+    harness.io/envRef: "engineering{{ cluster.clusterName }}gitops"
     harness.io/serviceRef: "gitopsapplicationsetsvc"
 spec:  
   generators:  
