@@ -2,9 +2,12 @@
   "cluster" : {
     "owner" : "cluster-admin@company.com",
     "address" : "https://kubernetes.default.svc",
+    "clusterName" : "dev",
     "name" : "in-cluster",
-    "namespace" : "gitops",
-    "clusterName": "dev"
+    "namespace" : "gitops"
   },
-  "replicas" : "0"
+  "replicas" : "0",
+  "spec" : {
+    "replicas" : "2"
+  }
 }
