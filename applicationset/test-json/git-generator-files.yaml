@@ -23,8 +23,8 @@ spec:
         path: "applicationset/test-json/apps/guestbook"
         kustomize:
           replicas:
-          - name: kustomizejson-testjson
-            count: 4
+            - name: kustomizejson-testjson
+              count: 4
       destination:  
         server: '{{cluster.address}}'  
         namespace: '{{cluster.namespace}}'
