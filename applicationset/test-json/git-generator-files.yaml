@@ -8,7 +8,7 @@ spec:
         repoURL: https://github.com/lorenyeung/gitops-examples.git  
         revision: HEAD  
         files:  
-        - path: "applicationset/test-json/cluster-config/**/config.json"  
+        - path: "applicationset/test-json/engineering**/config.json"  
   template:  
     metadata:  
       name: 'testjson-app'
