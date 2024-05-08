@@ -11,7 +11,7 @@ spec:
         - path: "applicationset/test-json/cluster-config/**/config.json"  
   template:  
     metadata:  
-      name: 'testjson--appset'
+      name: 'testjson-app'
       labels: 
         harness.io/envRef: 'engineering{{cluster.clusterName}}gitops'
         harness.io/serviceRef: "testjson"      
