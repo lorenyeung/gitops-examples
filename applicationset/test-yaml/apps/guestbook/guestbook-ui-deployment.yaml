@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: testjson
+  name: testyaml
 spec:
   revisionHistoryLimit: 3
   selector:
