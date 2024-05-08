@@ -16,12 +16,13 @@ spec:
         harness.io/envRef: 'engineering{{cluster.clusterName}}gitops'
         harness.io/serviceRef: "testjson"      
     spec:
-      replicas: '{{spec.replicas}}'
       project: "0e964829"
       source:  
         repoURL: https://github.com/lorenyeung/gitops-examples.git  
         targetRevision: HEAD  
-        path: "applicationset/test-json/apps/guestbook"  
+        path: "applicationset/test-json/apps/guestbook"
+        kustomize:
+          replicas: '{{spec.replicas}}'
       destination:  
         server: '{{cluster.address}}'  
         namespace: '{{cluster.namespace}}'
