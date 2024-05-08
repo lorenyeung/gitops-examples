@@ -1,28 +1,43 @@
 apiVersion: argoproj.io/v1alpha1  
 kind: ApplicationSet  
 metadata:  
-  name: guestbookappset
+  name: testyamlappset
 spec:  
   generators:  
     - git:  
         repoURL: https://github.com/lorenyeung/gitops-examples.git  
         revision: HEAD  
         files:  
-        - path: "applicationset/git-generator-files-discovery/cluster-config/**/config.json"  
-  template:  
-    metadata:  
-      name: '{{cluster.name}}-guestbook-appsetgenerated'
+        - path: "applicationset/test-yaml/engineering**/config.yaml"  
+  template:
+    metadata:
+      name: 'testyaml-app'
       labels: 
         harness.io/envRef: 'engineering{{cluster.clusterName}}gitops'
-        harness.io/serviceRef: "gitopsapplicationsetsvc"      
-    spec:  
+        harness.io/serviceRef: "testyaml"      
+    spec:
       project: "0e964829"
       source:  
         repoURL: https://github.com/lorenyeung/gitops-examples.git  
         targetRevision: HEAD  
-        path: "applicationset/git-generator-files-discovery/apps/guestbook"  
+        path: "applicationset/test-yaml/apps/guestbook"
+        kustomize:
+          replicas:
+            - name: kustomizeyaml-testyaml
+              count: '{{spec.replicas}}'
       destination:  
         server: '{{cluster.address}}'  
         namespace: '{{cluster.namespace}}'
-      syncPolicy:  
-        automated: {}
+      syncPolicy:
+        automated:
+          prune: true
+        syncOptions:
+          - PrunePropagationPolicy=undefined
+          - CreateNamespace=true
+          - Validate=true
+          - PruneLast=false
+          - ApplyOutOfSyncOnly=false
+          - FluxSubsystem=false
+          - AutoCreateFluxResources=false
+          - Replace=false
+          - retry=false

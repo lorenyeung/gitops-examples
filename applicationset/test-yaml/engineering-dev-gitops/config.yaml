@@ -1,0 +1,9 @@
+cluster:
+  owner: cluster-admin@company.com
+  address: https://kubernetes.default.svc
+  clusterName: dev
+  name: in-cluster
+  namespace: gitops
+replicas: 3
+spec:
+  replicas: 4
