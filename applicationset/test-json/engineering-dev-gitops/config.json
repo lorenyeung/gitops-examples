@@ -6,7 +6,7 @@
     "name" : "in-cluster",
     "namespace" : "gitops"
   },
-  "replicas" : "3",
+  "replicas" : 3,
   "spec" : {
     "replicas" : 2
   }
