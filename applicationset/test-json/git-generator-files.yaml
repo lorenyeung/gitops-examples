@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1  
 kind: ApplicationSet  
 metadata:  
-  name: guestbookappset
+  name: testjsonappset
 spec:  
   generators:  
     - git:  
@@ -11,7 +11,7 @@ spec:
         - path: "applicationset/test-json/cluster-config/**/config.json"  
   template:  
     metadata:  
-      name: '{{cluster.name}}-guestbook-appsetgenerated'
+      name: 'testjson--appset'
       labels: 
         harness.io/envRef: 'engineering{{cluster.clusterName}}gitops'
         harness.io/serviceRef: "testjson"      
