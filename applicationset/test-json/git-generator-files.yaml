@@ -24,7 +24,7 @@ spec:
         kustomize:
           replicas:
             - name: kustomizejson-testjson
-              count: 4
+              count: '{{spec.replicas}}'
       destination:  
         server: '{{cluster.address}}'  
         namespace: '{{cluster.namespace}}'
