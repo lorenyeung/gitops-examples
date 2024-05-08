@@ -22,7 +22,9 @@ spec:
         targetRevision: HEAD  
         path: "applicationset/test-json/apps/guestbook"
         kustomize:
-          replicas: '{{spec.replicas}}'
+          replicas:
+          - name: kustomizejson-testjson
+            count: 4
       destination:  
         server: '{{cluster.address}}'  
         namespace: '{{cluster.namespace}}'
