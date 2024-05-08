@@ -24,5 +24,16 @@ spec:
       destination:  
         server: '{{cluster.address}}'  
         namespace: '{{cluster.namespace}}'
-      syncPolicy:  
-        automated: {}
+      syncPolicy:
+        automated:
+          prune: true
+        syncOptions:
+          - PrunePropagationPolicy=undefined
+          - CreateNamespace=true
+          - Validate=true
+          - PruneLast=false
+          - ApplyOutOfSyncOnly=false
+          - FluxSubsystem=false
+          - AutoCreateFluxResources=false
+          - Replace=false
+          - retry=false
