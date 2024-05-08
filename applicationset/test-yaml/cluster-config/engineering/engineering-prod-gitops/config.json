@@ -1,0 +1,11 @@
+{
+  "cluster" : {
+    "owner" : "cluster-admin@company.com",
+    "address" : "https://kubernetes.default.svc",
+    "name" : "aws-us-west-2",
+    "namespace" : "default",
+    "clusterName" : "prod"
+  },
+  "aws_account" : "123456",
+  "asset_id" : "d"
+}
