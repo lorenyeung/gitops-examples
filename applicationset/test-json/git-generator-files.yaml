@@ -9,13 +9,14 @@ spec:
         revision: HEAD  
         files:  
         - path: "applicationset/test-json/engineering**/config.json"  
-  template:  
-    metadata:  
+  template:
+    metadata:
       name: 'testjson-app'
       labels: 
         harness.io/envRef: 'engineering{{cluster.clusterName}}gitops'
         harness.io/serviceRef: "testjson"      
-    spec:  
+    spec:
+      replicas: '{{spec.replicas}}'
       project: "0e964829"
       source:  
         repoURL: https://github.com/lorenyeung/gitops-examples.git  
