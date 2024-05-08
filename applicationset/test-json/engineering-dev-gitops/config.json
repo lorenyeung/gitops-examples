@@ -8,6 +8,6 @@
   },
   "replicas" : 3,
   "spec" : {
-    "replicas" : "2"
+    "replicas" : "3"
   }
 }
